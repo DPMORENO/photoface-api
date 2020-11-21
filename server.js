@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
+app.get('/', (req, res) => {res.send('it is working!')})
+
+
 app.post('/signin', (req, res)=> {
     knex.select('email', 'hash').from('login')
     .where('email', '=', req.body.email)

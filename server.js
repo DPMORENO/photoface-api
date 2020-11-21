@@ -65,6 +65,6 @@ app.put('/image', (req, res) => {
     .catch(err => res.status(400).json('unable to connect'))
 })
 
-app.listen(3000, () => {
-    console.log('All good');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 })

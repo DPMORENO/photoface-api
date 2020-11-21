@@ -8,7 +8,7 @@ const register = require('./controllers/register')
 const knex = require('knex')({
     client: 'pg',
     connection: {
-        host : '127.0.0.1',
+        host : 'postgresql-encircled-12852',
         user : 'postgres',
         password: '12345',
         database : 'smarbrain'
